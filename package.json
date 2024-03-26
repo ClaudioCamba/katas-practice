@@ -1,4 +1,8 @@
+
 {
+  "scripts": {
+    "test": "jest --watch leetCode/__tests__/"
+  },
   "devDependencies": {
     "jest": "^29.7.0"
   }
