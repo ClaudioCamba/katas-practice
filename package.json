@@ -1,7 +1,7 @@
 
 {
   "scripts": {
-    "test": "jest --watch leetCode/__tests__/"
+    "test": "jest --watch --detectOpenHandles"
   },
   "devDependencies": {
     "jest": "^29.7.0"
