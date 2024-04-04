@@ -9,6 +9,8 @@
  * @param {string} s
  * @return {string}
  */
+
+
 var longestPalindrome = function(s) {
     const strArray = s.split('');
     let result = [];

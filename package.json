@@ -1,7 +1,7 @@
 
 {
   "scripts": {
-    "test": "jest --watch --detectOpenHandles"
+    "test": "jest leetCode/__tests__/20.valid-parentheses.test.js"
   },
   "devDependencies": {
     "jest": "^29.7.0"
