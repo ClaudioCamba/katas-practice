@@ -1,7 +1,7 @@
 
 {
   "scripts": {
-    "test": "jest leetCode/__tests__/20.valid-parentheses.test.js"
+    "test": "jest leetCode/__tests__/28.find-the-index-of-the-first-occurrence-in-a-string.test.js"
   },
   "devDependencies": {
     "jest": "^29.7.0"
