@@ -1,7 +1,7 @@
 
 {
   "scripts": {
-    "test": "jest leetCode/__tests__/21.merge-two-sorted-lists.test.js"
+    "test": "jest leetCode/__tests__/3.longest-substring-without-repeating-characters.test.js"
   },
   "devDependencies": {
     "jest": "^29.7.0"
