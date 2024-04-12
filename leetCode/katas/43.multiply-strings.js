@@ -11,35 +11,58 @@
  * @return {string}
  */
 var multiply = function(num1, num2) {
-    let leftOver = 0, result = [], pos = null;
-    // const arr1 = num1.split('').map(num => Number(num));
-    const arr2 = num2.split('').map(num => Number(num));
+    // Multiply input
+    let result = [], pos = '';
 
+    const numLonger = num2.length > num1.length ? num2 : num1; 
+    const numShorter = num1.length < num2.length ? num1 : num2;
 
-    for (let i = arr2.length-1; i >= 0; i--) {
+    console.log(numShorter,numLonger)
 
-        if (i < arr2.length-1){
-            pos = '';
+    for (let i = numLonger.length-1; i >= 0; i--) {
 
-            let posCheck = (arr2.length-1) - i;
-            for (let o = 0; o < posCheck; o++) {
-                pos += '0';
-            }
-            pos = Number('1'+pos);
-        }
-
-        if (pos){
-            result.push((arr2[i]*Number(pos)) * Number(num1))
+        if (i < numLonger.length-1) pos += '0';
+        
+        if (pos !== ''){
+            result.push((numLonger[i]*Number(numShorter))+pos)
         } else {
-            result.push(arr2[i] * Number(num1))
-        }        
+            result.push((numLonger[i] * Number(numShorter)).toString())
+        }
     }
 
-    const finalSum = result.reduce((accumulator, currentValue) => {
-        return accumulator + currentValue
-    },0);
+    result.sort(function(a, b){return b.length - a.length})
 
-    return finalSum.toString();
+    // Add results
+    let sum = [], leftOver = 0, highNum = result[0].length;
+    const sumArr = result.map((num)=> {
+        let spaces = '', spacesNum = highNum-num.length;
+        for (let u = 0; u < spacesNum; u++) spaces += '0';
+        return spaces+num;
+    });
+
+    for (let i = highNum-1; i >= 0; i--) {
+        let add = 0 + leftOver;
+        leftOver = 0;
+
+        for (let e = 0; e < sumArr.length; e++) {
+            add += Number(sumArr[e][i]);
+        }
+
+        if (add <= 9){
+            sum.unshift(add.toString())
+        } else {
+            sum.unshift(add.toString()[1])
+            leftOver = Number(add.toString()[0])
+        }
+
+        if (leftOver > 0 && i === 0) {
+            sum.unshift(leftOver.toString())
+        }
+    }
+
+    if (Number(sum.join('')) === 0) return "0"
+
+    return sum.join('');
 };
 // @lc code=end
 
