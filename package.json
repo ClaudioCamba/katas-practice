@@ -1,7 +1,7 @@
 
 {
   "scripts": {
-    "test": "jest leetCode/__tests__/43."
+    "test": "jest leetCode/__tests__/6.zig"
   },
   "devDependencies": {
     "jest": "^29.7.0"
