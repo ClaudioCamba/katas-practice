@@ -17,12 +17,10 @@ var numberOfLines = function(widths, s) {
       ];
       
     const letters = {};
-    let totalWidth = [], lines = 0, lastWidth = 0, hold = 0;
+    let lines = 0, lastWidth = 0, hold = 0;
 
 
     for (let i = 0; i < widths.length; i++) {
-        // console.log(widths[i])
-        // console.log(s[i])
         letters[alphabet[i]] = widths[i]
     }
 
