@@ -17,7 +17,7 @@ var multiply = function(num1, num2) {
     const numLonger = num2.length > num1.length ? num2 : num1; 
     const numShorter = num1.length < num2.length ? num1 : num2;
 
-    console.log(numShorter,numLonger)
+    // console.log(numShorter,numLonger)
 
     for (let i = numLonger.length-1; i >= 0; i--) {
 
