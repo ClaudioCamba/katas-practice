@@ -1,7 +1,7 @@
 
 {
   "scripts": {
-    "test": "jest leetCode/__tests__/806"
+    "test": "jest leetCode/__tests__/70."
   },
   "devDependencies": {
     "jest": "^29.7.0"
